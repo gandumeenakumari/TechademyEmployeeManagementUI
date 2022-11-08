@@ -19,4 +19,7 @@ export class DesignationService {
   {
     return this.http.post<Designation>('https://localhost:44358/api/Designation',request);
   }
+  
+
 }
+

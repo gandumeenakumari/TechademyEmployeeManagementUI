@@ -1,0 +1,52 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Employee </h1>
+    <div class="row">
+        <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateEmployee">
+            <div class="mb-3">
+                <label for="employeeID" class="form-label">Id</label>
+                <input type="number" class="form-control" id="employeeID" readonly
+                name="employeeID"[(ngModel)]="employeeDetails.employeeID">
+              </div>
+             
+            <div class="mb-3">
+              <label for="employeeName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="employeeName"
+              name="employeeName"[(ngModel)]="employeeDetails.employeeName">
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="text" class="form-control" id="gender" 
+                name="gender"[(ngModel)]="employeeDetails.gender">
+              </div>
+              <div class="mb-3">
+                <label for="mobileNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="mobileNumber" 
+                name="mobileNumber"[(ngModel)]="employeeDetails.mobileNumber">
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address"
+                name="address"[(ngModel)]="employeeDetails.address" >
+              </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" 
+                name="email"[(ngModel)]="employeeDetails.email">
+              </div>
+             
+              <div class="mb-3">
+                <label for="designationID" class="form-label">Designation ID</label>
+                <input type="number" class="form-control" id="designationID" 
+                name="designationID"[(ngModel)]="employeeDetails.designationID">
+              </div>
+             
+              
+            <button type="submit" class="btn btn-primary" (click)="updateEmployee()">Save</button>
+            <button type="button" class="btn btn-danger"(click)="deleteEmployee(employeeDetails.employeeID)">Delete</button>
+          </form>  
+                      
+        </div>
+    </div>
+</div>

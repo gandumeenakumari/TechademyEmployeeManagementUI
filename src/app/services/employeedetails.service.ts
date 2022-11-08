@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { ReturnStatement } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Employee } from '../models/emp.model';
@@ -18,5 +19,16 @@ export class EmployeedetailsService {
   {
     return this.http.post<Employee>('https://localhost:44358/api/EmployeeDetails',request);
   }
- 
+  getEmployeeByID(employeeID:string):Observable<Employee>
+  {
+    return this.http.get<Employee>('https://localhost:44358/api/EmployeeDetails/'+employeeID);
+  }
+  updateEmployee(employeeID:number,updateEmployeeRequest:Employee):Observable<Employee>{
+    return this.http.put<Employee>('https://localhost:44358/api/EmployeeDetails/'+employeeID,updateEmployeeRequest)
+  }
+  deleteEmployee(employeeID:number):Observable<Employee>
+  {
+   return this.http.delete<Employee>('https://localhost:44358/api/EmployeeDetails/');
+  }
+  
 }

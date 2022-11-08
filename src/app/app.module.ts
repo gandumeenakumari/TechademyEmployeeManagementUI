@@ -12,6 +12,13 @@ import { HomeComponent } from './components/home/home.component';
 import { EmployeedetailsComponent } from './components/employeedetails/employeedetails.component';
 import { DesignationComponent } from './components/designation/designation.component';
 import { AddemployeeComponent } from './components/addemployee/addemployee.component';
+import { UpdateemployeeComponent } from './components/employee/updateemployee/updateemployee.component';
+import { UpdatedesignationComponent } from './components/designation/updatedesignation/updatedesignation.component';
+import { DeletedesignationComponent } from './components/designation/deletedesignation/deletedesignation.component';
+import { GetdesignationComponent } from './components/designation/getdesignation/getdesignation.component';
+import { GetemployeebyidComponent } from './components/employee/getemployeebyid/getemployeebyid.component';
+import { DeleteemployeeComponent } from './components/employee/deleteemployee/deleteemployee.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +27,14 @@ import { AddemployeeComponent } from './components/addemployee/addemployee.compo
     HomeComponent,
     EmployeedetailsComponent,
     DesignationComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    UpdateemployeeComponent,
+    UpdatedesignationComponent,
+    DeletedesignationComponent,
+    GetdesignationComponent,
+    GetemployeebyidComponent,
+    DeleteemployeeComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<h2>Employee Designation Details</h2>
+<div class="container my-5">
+    
+    <table class="table" *ngIf="Designation && Designation.length > 0">
+        <thead>
+            <tr>
+            <th>S.No</th>
+            
+            <th>Designation Name</th>
+            <th>Role Name</th>
+            <th>Department Name</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of Designation">
+            <td>{{emp.designationID}}</td>
+            <td>{{emp.designationName}}</td>
+            <td>{{emp.roleName}}</td>
+            <td>{{emp.departmentName}}</td>
+        </tr>
+    </tbody>
+</table>
+<p *ngIf="!Designation || Designation.length<=0">No records found for Designation</p>
+</div>
+            
+   
