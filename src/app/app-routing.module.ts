@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GetdesignationComponent } from './components/designation/getdesignation/getdesignation.component';
 import { UpdatedesignationComponent } from './components/designation/updatedesignation/updatedesignation.component';
@@ -13,6 +13,10 @@ import { AuthGuard } from './services/auth.guard';
 import { UpdateemployeeComponent } from './components/employee/updateemployee/updateemployee.component';
 import { DesignationComponent } from './components/designation/designation.component';
 import { DeletedesignationComponent } from './components/designation/deletedesignation/deletedesignation.component';
+import { AddworkinghoursComponent } from './components/workinghours/addworkinghours/addworkinghours.component';
+import { GetallworkinghoursComponent } from './components/workinghours/getallworkinghours/getallworkinghours.component';
+import { UpdateworkinghoursComponent } from './components/workinghours/updateworkinghours/updateworkinghours.component';
+import { DeleteworkinghoursComponent } from './components/workinghours/deleteworkinghours/deleteworkinghours.component';
 const routes: Routes = [
   
     {
@@ -46,12 +50,24 @@ const routes: Routes = [
       component:EmployeedetailsComponent
     },
     {
+      path:'getallworkinghours',
+      component:GetallworkinghoursComponent
+    },
+    {
       path:'getemployeebyid',
       component:GetemployeebyidComponent
     },
     {
       path:'employeedetails/:employeeID',
       component:UpdateemployeeComponent
+    },
+    {
+      path:'getallworkinghours/:id',
+      component:UpdateworkinghoursComponent
+    },
+    {
+      path:'getallworkinghours/:id',
+      component:DeleteworkinghoursComponent
     },
     {
       path:'employeedetails/:employeeID',
@@ -64,7 +80,12 @@ const routes: Routes = [
     {
       path:'addemployee',
       component:AddemployeeComponent
-    }
+    },
+    {
+      path:'addworkinghours',
+      component:AddworkinghoursComponent
+    },
+
   
 ];
 

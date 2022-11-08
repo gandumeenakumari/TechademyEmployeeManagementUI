@@ -1,0 +1,30 @@
+
+<h2>Working Hours Management</h2>
+<div class="container my-5">
+    
+    <table class="table" *ngIf="Workinghours && Workinghours.length > 0">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>EmployeeID</th>
+            <th>CompanyWokingHours</th>
+            <th>EmployeeWorkingHours</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of Workinghours">
+            <td>{{emp.id}}</td>
+            <td>{{emp.employeeID}}</td>
+            <td>{{emp.companyWokingHours}}</td>
+            <td>{{emp.employeeWorkingHours}}</td>
+            <td><a [routerLink]="[emp.id]">View</a></td>
+            <td><a [routerLink]="[emp.id]">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<p *ngIf="!Workinghours || Workinghours.length<=0">No records found</p>
+</div>
+        
