@@ -24,11 +24,11 @@ export class EmployeedetailsService {
     return this.http.get<Employee>('https://localhost:44358/api/EmployeeDetails/'+employeeID);
   }
   updateEmployee(employeeID:number,updateEmployeeRequest:Employee):Observable<Employee>{
-    return this.http.put<Employee>('https://localhost:44358/api/EmployeeDetails/'+employeeID,updateEmployeeRequest)
+    return this.http.put<Employee>('https://localhost:44358/api/EmployeeDetails?EmployeeID='+employeeID,updateEmployeeRequest)
   }
   deleteEmployee(employeeID:number):Observable<Employee>
   {
-   return this.http.delete<Employee>('https://localhost:44358/api/EmployeeDetails/');
+   return this.http.delete<Employee>('https://localhost:44358/api/EmployeeDetails/'+employeeID);
   }
   
 }

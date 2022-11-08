@@ -31,6 +31,7 @@ addNewEmployee()
   .subscribe({
     next:(Employee)=>
     {
+      this.router.navigate(['employeedetails']);
       console.log(Employee);
       
     }

@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './services/auth.guard';
 import { UpdateemployeeComponent } from './components/employee/updateemployee/updateemployee.component';
+import { DesignationComponent } from './components/designation/designation.component';
+import { DeletedesignationComponent } from './components/designation/deletedesignation/deletedesignation.component';
 const routes: Routes = [
   
     {
@@ -25,6 +27,10 @@ const routes: Routes = [
       path : '',
       redirectTo : 'login',
       pathMatch : 'full'
+    },
+    {
+      path:'designation',
+      component:DesignationComponent
     },
     {
       path:'getdesignation',
@@ -48,8 +54,12 @@ const routes: Routes = [
       component:UpdateemployeeComponent
     },
     {
-      path:'deleteemployee',
+      path:'employeedetails/:employeeID',
       component:DeleteemployeeComponent
+    },
+    {
+      path:'getdesignation/:designationID',
+      component:UpdatedesignationComponent
     },
     {
       path:'addemployee',

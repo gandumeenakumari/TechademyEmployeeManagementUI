@@ -19,7 +19,19 @@ export class DesignationService {
   {
     return this.http.post<Designation>('https://localhost:44358/api/Designation',request);
   }
-  
+  getDesignation(designationID:string):Observable<Designation>
+  {
+    return this.http.get<Designation>('https://localhost:44358/api/Designation/'+designationID);
+    
+  }
+  updateDesignation(designationID:number,request:Designation):Observable<Designation>{
+    return this.http.put<Designation>('https://localhost:44358/api/Designation?DesignationID='+designationID,request)
+  }
 
+  deleteDesignation(designationID:number):Observable<Designation>
+  {
+   return this.http.delete<Designation>('https://localhost:44358/api/Designation/'+designationID);
+  }
+  
 }
 

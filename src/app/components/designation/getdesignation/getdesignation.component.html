@@ -4,11 +4,11 @@
     <table class="table" *ngIf="Designation && Designation.length > 0">
         <thead>
             <tr>
-            <th>S.No</th>
-            
+            <th>Designation ID</th>
             <th>Designation Name</th>
             <th>Role Name</th>
             <th>Department Name</th>
+            <th></th>
             <th></th>
 
         </tr>
@@ -19,6 +19,8 @@
             <td>{{emp.designationName}}</td>
             <td>{{emp.roleName}}</td>
             <td>{{emp.departmentName}}</td>
+            <td><a [routerLink]="[emp.designationID]">View</a></td>
+            <td><a [routerLink]="[emp.designationID]">Delete</a></td>
         </tr>
     </tbody>
 </table>

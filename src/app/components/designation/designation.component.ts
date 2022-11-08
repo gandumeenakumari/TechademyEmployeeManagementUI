@@ -27,6 +27,7 @@ addDesignation()
   .subscribe({
     next:(Designation)=>{
       console.log(Designation);
+      this.router.navigate(['/getdesignation']);
       
     }
   })

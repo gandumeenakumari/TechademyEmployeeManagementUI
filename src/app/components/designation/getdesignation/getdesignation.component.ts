@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Designation } from 'src/app/models/designation.model';
 import { DesignationService } from 'src/app/services/designation.service';
 
@@ -10,10 +11,18 @@ import { DesignationService } from 'src/app/services/designation.service';
 export class GetdesignationComponent implements OnInit {
 
   Designation:Designation[]=[];
-  constructor(private designationservice:DesignationService) { }
+
+  designation:Designation={
+    designationID:0,
+    designationName:'',
+    roleName:'',
+    departmentName:''
+  }
+  constructor(private route:ActivatedRoute,private designationservice:DesignationService,private router:Router) { }
 
 
   ngOnInit(): void {
+ 
     this.designationservice.getAllDesignations()
     .subscribe({
       next:(Designation)=>
@@ -24,6 +33,9 @@ export class GetdesignationComponent implements OnInit {
         console.log(response);
       }
     })
+    
   }
+  
 
 }
+
