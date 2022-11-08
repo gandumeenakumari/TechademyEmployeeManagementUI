@@ -22,6 +22,11 @@ import { GetallworkinghoursComponent } from './components/workinghours/getallwor
 import { UpdateworkinghoursComponent } from './components/workinghours/updateworkinghours/updateworkinghours.component';
 import { AddworkinghoursComponent } from './components/workinghours/addworkinghours/addworkinghours.component';
 import { DeleteworkinghoursComponent } from './components/workinghours/deleteworkinghours/deleteworkinghours.component';
+import { AddleaveComponent } from './components/requestleave/addleave/addleave/addleave.component';
+import { UpdateleaveComponent } from './components/requestleave/updateleave/updateleave/updateleave.component';
+import { DeleteleaveComponent } from './components/requestleave/deleteleave/deleteleave/deleteleave.component';
+import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,12 @@ import { DeleteworkinghoursComponent } from './components/workinghours/deletewor
     UpdateworkinghoursComponent,
     AddworkinghoursComponent,
     DeleteworkinghoursComponent,
+    AddleaveComponent,
+    UpdateleaveComponent,
+    DeleteleaveComponent,
+    GetallleavesComponent,
+    
+  
    
   ],
   imports: [
@@ -49,7 +60,9 @@ import { DeleteworkinghoursComponent } from './components/workinghours/deletewor
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+  
 
   ],
   providers: [

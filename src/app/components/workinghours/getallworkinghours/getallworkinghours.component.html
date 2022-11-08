@@ -15,15 +15,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let emp of Workinghours">
+        <tr *ngFor="let emp of Workinghours | orderBy:key:reverse|paginate:{itemsperpage:5,currentpage:p};">
             <td>{{emp.id}}</td>
             <td>{{emp.employeeID}}</td>
             <td>{{emp.companyWokingHours}}</td>
             <td>{{emp.employeeWorkingHours}}</td>
-            <td><a [routerLink]="[emp.id]">View</a></td>
-            <td><a [routerLink]="[emp.id]">Delete</a></td>
-        </tr>
+            <td><a class="viewbtn margin-right"  [routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a></td>
+            <td><a class="deletebtn margin-right"  [routerLink]="[emp.id]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+            </tr>
     </tbody>
+    
 </table>
 <p *ngIf="!Workinghours || Workinghours.length<=0">No records found</p>
 </div>
