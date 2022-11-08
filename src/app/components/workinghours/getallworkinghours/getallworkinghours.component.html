@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let emp of Workinghours | orderBy:key:reverse|paginate:{itemsperpage:5,currentpage:p};">
+        <tr *ngFor="let emp of Workinghours ">
             <td>{{emp.id}}</td>
             <td>{{emp.employeeID}}</td>
             <td>{{emp.companyWokingHours}}</td>

@@ -17,6 +17,10 @@ import { AddworkinghoursComponent } from './components/workinghours/addworkingho
 import { GetallworkinghoursComponent } from './components/workinghours/getallworkinghours/getallworkinghours.component';
 import { UpdateworkinghoursComponent } from './components/workinghours/updateworkinghours/updateworkinghours.component';
 import { DeleteworkinghoursComponent } from './components/workinghours/deleteworkinghours/deleteworkinghours.component';
+import { AddleaveComponent } from './components/requestleave/addleave/addleave/addleave.component';
+import { UpdateleaveComponent } from './components/requestleave/updateleave/updateleave/updateleave.component';
+import { DeleteleaveComponent } from './components/requestleave/deleteleave/deleteleave/deleteleave.component';
+import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
 const routes: Routes = [
   
     {
@@ -50,6 +54,10 @@ const routes: Routes = [
       component:EmployeedetailsComponent
     },
     {
+      path:'getallleaves',
+      component:GetallleavesComponent
+    },
+    {
       path:'getallworkinghours',
       component:GetallworkinghoursComponent
     },
@@ -78,8 +86,20 @@ const routes: Routes = [
       component:UpdatedesignationComponent
     },
     {
+      path:'getallleaves/:leaveID',
+      component:UpdateleaveComponent
+    },
+    {
+      path:'getallleaves/:leaveID',
+      component:DeleteleaveComponent
+    },
+    {
       path:'addemployee',
       component:AddemployeeComponent
+    },
+    {
+      path:'addleave',
+      component:AddleaveComponent
     },
     {
       path:'addworkinghours',
