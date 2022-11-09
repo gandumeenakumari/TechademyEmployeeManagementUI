@@ -1,5 +1,10 @@
 <div class="container my-5">
     <h1 class="mb-3">Employees</h1>
+    
+<div class="container">
+    <a class="btn btn-sm text-white btn-primary"  [routerLink]="['/addemployee']">Add Employee &nbsp;<i class="bi bi-bag"></i></a>
+</div>
+    
     <table class="table" *ngIf="EmployeeDetails && EmployeeDetails.length > 0">
         <thead>
             <tr>
@@ -30,8 +35,10 @@
                 <td>{{emp.designationName}}</td>
                 <td>{{emp.roleName}}</td>
                 <td>{{emp.departmentName}}</td>
-                <td>{{emp.memberSince}}</td>
-                <td><a [routerLink]="[emp.employeeID]">View</a></td>
+                <td>{{emp.memberSince}}</td> 
+            <td><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.employeeID]">View &nbsp;<i class="bi bi-bag"></i></a></td>
+            <td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.employeeID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+          
        
             </tr>
         </tbody>

@@ -19,8 +19,9 @@
             <td>{{emp.designationName}}</td>
             <td>{{emp.roleName}}</td>
             <td>{{emp.departmentName}}</td>
-            <td><a [routerLink]="[emp.designationID]">View</a></td>
-            <td><a [routerLink]="[emp.designationID]">Delete</a></td>
+            <td><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.designationID]">View &nbsp;<i class="bi bi-bag"></i></a></td>
+            <td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.designationID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+          
         </tr>
     </tbody>
 </table>

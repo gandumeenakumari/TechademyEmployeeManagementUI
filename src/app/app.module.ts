@@ -28,6 +28,9 @@ import { DeleteleaveComponent } from './components/requestleave/deleteleave/dele
 import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { DataComponent } from './components/paymentrules/data/data/data.component';
+import { ItemsComponent } from './components/paymentrules/items/items/items.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +54,9 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     UpdateleaveComponent,
     DeleteleaveComponent,
     GetallleavesComponent,
+    DataComponent,
+    ItemsComponent
+
     
   
    

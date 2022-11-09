@@ -21,6 +21,7 @@ import { AddleaveComponent } from './components/requestleave/addleave/addleave/a
 import { UpdateleaveComponent } from './components/requestleave/updateleave/updateleave/updateleave.component';
 import { DeleteleaveComponent } from './components/requestleave/deleteleave/deleteleave/deleteleave.component';
 import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
+import { DataComponent } from './components/paymentrules/data/data/data.component';
 const routes: Routes = [
   
     {
@@ -60,6 +61,10 @@ const routes: Routes = [
     {
       path:'getallworkinghours',
       component:GetallworkinghoursComponent
+    },
+    {
+      path:'data',
+      component:DataComponent
     },
     {
       path:'getemployeebyid',

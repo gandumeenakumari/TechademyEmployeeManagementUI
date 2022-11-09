@@ -32,7 +32,7 @@ addNewEmployee()
     next:(Employee)=>
     {
       this.router.navigate(['employeedetails']);
-      console.log(Employee);
+      
       
     }
   })
