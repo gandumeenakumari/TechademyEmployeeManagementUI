@@ -3,13 +3,13 @@
 </div>
 <div class="container my-5">
     
-    <table class="table" *ngIf="LeaveStatus && LeaveStatus.length > 0">
-        <thead>
+    <table class="table table-bordered" *ngIf="LeaveStatus && LeaveStatus.length > 0">
+        <thead class="bg-dark text-white">
             <tr>
             <th>ID</th>
             <th>Status</th>
-            <th></th>   
-            <th></th>
+            <th style="text-align:center">Action</th>   
+            
 
         </tr>
     </thead>
@@ -17,9 +17,9 @@
         <tr *ngFor="let emp of LeaveStatus">
             <td>{{emp.id}}</td>
             <td>{{emp.status}}</td>
-            
-            <td><a [routerLink]="[emp.id]">View</a></td>
-            <td><a [routerLink]="[emp.id]">Delete</a></td>
+
+                <td style="text-align:center"><a class="btn btn-sm text-white btn-primary" style="margin:5px"[routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a>
+            <a class="btn btn-sm text-white btn-danger" style="margin:5px" [routerLink]="[emp.id]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
         </tr>
     </tbody>
 </table>

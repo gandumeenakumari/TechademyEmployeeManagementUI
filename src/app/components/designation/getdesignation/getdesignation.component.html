@@ -1,9 +1,36 @@
 
-<div class="card">
-    <h2 class="text-center">Employee Designation Details</h2>
-    <div class="card-header"></div>
-    <div class="container my-5">
+<div class="container my-5">
+    <h1 class="mb-3">Employee Designation Details </h1>
+    <div class="center-dialog-vertically">
+    <a class="btn btn-sm text-white btn-primary"  [routerLink]="['/desination']">Add Designation &nbsp;<i class="bi bi-bag"></i></a>
+
+</div>
+    
+    
+<div class="container mt-5">
+    <div class="form-group float-end text-right">
         
+            <input type="text" name="Search" [(ngModel)]="searchText" placeholder="Search by ID,Name">
+       
+    </div>
+</div>
+<div>
+    <p>
+
+    </p>
+</div>
+
+<div class="container">
+    <div>
+        <h3>Show  <select (change)="onTableSizeChange($event)">
+            
+            <option *ngFor="let size of tablesize">
+               {{size}}
+            </option>
+        </select> Entities </h3>
+       
+    </div>
+
         <table class="table table-bordered" *ngIf="Designation && Designation.length > 0">
             <thead class="bg-dark text-white">
                 <tr>
@@ -12,8 +39,8 @@
                 <th>Designation Name</th>
                 <th>Role Name</th>
                 <th>Department Name</th>
-                <th>View</th>
-                <th>Delete</th>
+                <th style="text-align:center">Action</th>
+                
     
             </tr>
         </thead>
@@ -22,19 +49,26 @@
                 
                     
 
-            <tr *ngFor="let emp of Designation;let sr = index">
+            <tr *ngFor="let emp of Designation|filter:searchText | paginate:{itemsPerPage:tableSize,
+                currentPage:page,totalItems:count}; let i=index;let sr = index">
                 <td>{{sr+1}}</td>
                 <td>{{emp.designationID}}</td>
                 <td>{{emp.designationName}}</td>
                 <td>{{emp.roleName}}</td>
                 <td>{{emp.departmentName}}</td>
-                <td><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.designationID]">View &nbsp;<i class="bi bi-bag"></i></a></td>
-                <td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.designationID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+                <td style="text-align:center"><a class="btn btn-sm text-white btn-primary" style="margin:5px"  [routerLink]="[emp.designationID]">View &nbsp;<i class="bi bi-bag"></i></a>
+                <a class="btn btn-sm text-white btn-danger" style="margin:5px "   [routerLink]="[emp.designationID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
               
             </tr>
         </tbody>
     </table>
-</div>
+    <div>
+    </div>
+        <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
     <p *ngIf="!Designation || Designation.length<=0">No records found for Designation</p>
     </div>
 

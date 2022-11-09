@@ -34,8 +34,8 @@
                 <th>Employee ID</th>
                 <th>companyWokingHours</th>
                 <th>employeeWorkingHours</th>
-                <th>View</th>
-                <th>Delete</th>
+                <th style="text-align:center">Action</th>
+                
             
             
 
@@ -50,8 +50,8 @@
             <td>{{emp.employeeID}}</td>,
             <td>{{emp.companyWokingHours}}</td>
             <td>{{emp.employeeWorkingHours}}</td>
-            <td><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a></td>
-            <td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.id]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+            <td style="text-align:center"><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a>
+            <a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.id]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
             </tr>
     </tbody>
 </table>
