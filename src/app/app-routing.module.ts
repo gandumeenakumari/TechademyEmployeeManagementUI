@@ -27,6 +27,9 @@ import { UpdatestatusComponent } from './components/leavestatus/updatestatus/upd
 import { AddstatusComponent } from './components/leavestatus/addstatus/addstatus/addstatus.component';
 import { DisplayComponent } from './components/display/display.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PaymentrulesComponent } from './components/paymentrules/paymentrules/paymentrules.component';
+import { UpdatepaymentrulesComponent } from './components/paymentrules/updatepaymentrules/updatepaymentrules/updatepaymentrules.component';
+import { AddpaymentrulesComponent } from './components/paymentrules/addpaymentrules/addpaymentrules/addpaymentrules.component';
 const routes: Routes = [
   
     {
@@ -76,6 +79,10 @@ const routes: Routes = [
       component:GetallleavesComponent
     },
     {
+      path:'paymentrules',
+      component:PaymentrulesComponent
+    },
+    {
       path:'getallworkinghours',
       component:GetallworkinghoursComponent
     },
@@ -95,6 +102,10 @@ const routes: Routes = [
     {
       path:'getallworkinghours/:id',
       component:UpdateworkinghoursComponent
+    },
+    {
+      path:'paymentrules/:id',
+      component:UpdatepaymentrulesComponent
     },
     {
       path:'getstatus/:id',
@@ -129,12 +140,20 @@ const routes: Routes = [
       component:AddleaveComponent
     },
     {
+      path:'addpaymentrules',
+      component:AddpaymentrulesComponent
+    },
+    {
       path:'addworkinghours',
       component:AddworkinghoursComponent
     },
     {
       path:'addstatus',
       component:AddstatusComponent
+    },
+    {
+      path:'updatepaymentrules',
+      component:UpdatepaymentrulesComponent
     }
 
   

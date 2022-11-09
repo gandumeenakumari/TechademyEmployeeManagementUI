@@ -29,7 +29,6 @@ import { GetallleavesComponent } from './components/requestleave/getallleave/get
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DataComponent } from './components/paymentrules/data/data/data.component';
-import { ItemsComponent } from './components/paymentrules/items/items/items.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
@@ -72,6 +71,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { DisplayComponent } from './components/display/display.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
+import { PaymentrulesComponent } from './components/paymentrules/paymentrules/paymentrules.component';
+import { AddpaymentrulesComponent } from './components/paymentrules/addpaymentrules/addpaymentrules/addpaymentrules.component';
+import { UpdatepaymentrulesComponent } from './components/paymentrules/updatepaymentrules/updatepaymentrules/updatepaymentrules.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +98,6 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     DeleteleaveComponent,
     GetallleavesComponent,
     DataComponent,
-    ItemsComponent,
     HeaderComponent,
     SidenavComponent,
     AddstatusComponent,
@@ -104,6 +105,9 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     GetstatusComponent,
     DisplayComponent,
     FooterComponent,
+    PaymentrulesComponent,
+    AddpaymentrulesComponent,
+    UpdatepaymentrulesComponent,
 
 
     
