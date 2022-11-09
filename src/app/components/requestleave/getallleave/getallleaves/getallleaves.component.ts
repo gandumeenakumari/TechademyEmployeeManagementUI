@@ -11,12 +11,10 @@ import { RequestleaveService } from 'src/app/services/requestleave.service';
 export class GetallleavesComponent implements OnInit {
 RequestLeave:RequestLeave[]=[];
 requestleave:RequestLeave={
-  leaveID:0,
-  employeeID:0,
+  id:0,
   leaveType:'',
   when:new Date(),
-  leaveReason:'',
-  leaveStatus:''
+  leaveReason:''
 
 }
 

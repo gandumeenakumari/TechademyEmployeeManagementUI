@@ -17,17 +17,17 @@ export class RequestleaveService {
   {
     return this.http.post<RequestLeave>('https://localhost:44358/api/RequestLeave',request);
   }
-  getLeave(leaveID:string):Observable<RequestLeave>
+  getLeave(id:string):Observable<RequestLeave>
   {
-    return this.http.get<RequestLeave>('https://localhost:44358/api/RequestLeave/'+leaveID);
+    return this.http.get<RequestLeave>('https://localhost:44358/api/RequestLeave/'+id);
     
   }
-  updateLeave(leaveID:number,request:RequestLeave):Observable<RequestLeave>{
-    return this.http.put<RequestLeave>('https://localhost:44358/api/RequestLeave?leaveID='+leaveID,request)
+  updateLeave(id:number,request:RequestLeave):Observable<RequestLeave>{
+    return this.http.put<RequestLeave>('https://localhost:44358/api/RequestLeave?id='+id,request)
   }
 
-  deleteLeave(leaveID:number):Observable<RequestLeave>
+  deleteLeave(id:number):Observable<RequestLeave>
   {
-   return this.http.delete<RequestLeave>('https://localhost:44358/api/RequestLeave/'+leaveID);
+   return this.http.delete<RequestLeave>('https://localhost:44358/api/RequestLeave/'+id);
   }
 }

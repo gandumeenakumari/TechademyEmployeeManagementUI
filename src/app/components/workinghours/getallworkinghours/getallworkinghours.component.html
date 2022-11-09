@@ -7,8 +7,9 @@
             <tr>
             <th>ID</th>
             <th>EmployeeID</th>
-            <th>CompanyWokingHours</th>
-            <th>EmployeeWorkingHours</th>
+            <th>C</th>
+            <th>Em</th>
+            <th></th>
             <th></th>
             <th></th>
 
@@ -20,7 +21,6 @@
             <td>{{emp.employeeID}}</td>,
             <td>{{emp.companyWokingHours}}</td>
             <td>{{emp.employeeWorkingHours}}</td>
-            
             <td><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a></td>
             <td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.id]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
             </tr>
@@ -28,4 +28,5 @@
 </table>
 <p *ngIf="!Workinghours || Workinghours.length<=0">No records found</p>
 </div>
+
         

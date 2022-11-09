@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Status </h1>
+    <div class="row">
+        <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateStatus">
+            <div class="mb-3">
+                <label for="id" class="form-label">Leave Id</label>
+                <input type="number" class="form-control" id="id" readonly
+                name="id"[(ngModel)]="leaveStatus.id">
+              </div>
+
+           
+              <div class="mb-3">
+                <label for="status" class="form-label">Leave Status</label>
+                <input type="text" class="form-control" id="status" 
+                name="status"[(ngModel)]="leaveStatus.status">
+              </div>
+           
+           
+          
+            <button type="submit" class="btn btn-success" (click)="updateStatus()">Save</button>
+            <button type="button" class="btn btn-danger"(click)="deleteStatus(leaveStatus.id)">Delete</button>
+          </form>  
+                      
+        </div>
+    </div>
+</div>

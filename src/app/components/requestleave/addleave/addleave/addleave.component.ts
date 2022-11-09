@@ -11,12 +11,10 @@ import { RequestleaveService } from 'src/app/services/requestleave.service';
 export class AddleaveComponent implements OnInit {
 
   request:RequestLeave={
-    leaveID:0,
-    employeeID:0,
+    id:0,
     leaveType:'',
     when:new Date(),
     leaveReason:'',
-    leaveStatus:''
   
   }
   constructor(private route:ActivatedRoute,private requstleaveservice:RequestleaveService,private router:Router) { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
   repeatpass : string = 'none';
   displayMsg : string = '';
   isAccountCreated : boolean =false;
-  constructor(private authservice : AuthService) { }
+  constructor(private authservice : AuthService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -52,6 +53,7 @@ export class RegisterComponent implements OnInit {
         this.registerform.value.pwd!
       ]).subscribe((res: string) =>{
         if(res== "Success"){
+          this.router.navigateByUrl('login');
           this.displayMsg = "Account created successfully";
           this.isAccountCreated= true;
         }

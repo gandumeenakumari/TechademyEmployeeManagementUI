@@ -22,6 +22,11 @@ import { UpdateleaveComponent } from './components/requestleave/updateleave/upda
 import { DeleteleaveComponent } from './components/requestleave/deleteleave/deleteleave/deleteleave.component';
 import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
 import { DataComponent } from './components/paymentrules/data/data/data.component';
+import { GetstatusComponent } from './components/leavestatus/getstatus/getstatus/getstatus.component';
+import { UpdatestatusComponent } from './components/leavestatus/updatestatus/updatestatus/updatestatus.component';
+import { AddstatusComponent } from './components/leavestatus/addstatus/addstatus/addstatus.component';
+import { DisplayComponent } from './components/display/display.component';
+import { HeaderComponent } from './components/header/header.component';
 const routes: Routes = [
   
     {
@@ -33,9 +38,17 @@ const routes: Routes = [
       component : RegisterComponent
     },
     {
-      path : '',
-      redirectTo : 'login',
-      pathMatch : 'full'
+      path:'',
+      component:HeaderComponent,
+      
+    },
+    {
+      path:'display',
+      component:DisplayComponent
+    },
+    {
+      path:'header',
+      component:HeaderComponent
     },
     {
       path:'designation',
@@ -44,6 +57,10 @@ const routes: Routes = [
     {
       path:'getdesignation',
       component:GetdesignationComponent
+    },
+    {
+      path:'getstatus',
+      component:GetstatusComponent
     },
     {
       path: 'home',
@@ -70,6 +87,7 @@ const routes: Routes = [
       path:'getemployeebyid',
       component:GetemployeebyidComponent
     },
+
     {
       path:'employeedetails/:employeeID',
       component:UpdateemployeeComponent
@@ -77,6 +95,10 @@ const routes: Routes = [
     {
       path:'getallworkinghours/:id',
       component:UpdateworkinghoursComponent
+    },
+    {
+      path:'getstatus/:id',
+      component:UpdatestatusComponent
     },
     {
       path:'getallworkinghours/:id',
@@ -91,11 +113,11 @@ const routes: Routes = [
       component:UpdatedesignationComponent
     },
     {
-      path:'getallleaves/:leaveID',
+      path:'getallleaves/:id',
       component:UpdateleaveComponent
     },
     {
-      path:'getallleaves/:leaveID',
+      path:'getallleaves/:id',
       component:DeleteleaveComponent
     },
     {
@@ -110,6 +132,10 @@ const routes: Routes = [
       path:'addworkinghours',
       component:AddworkinghoursComponent
     },
+    {
+      path:'addstatus',
+      component:AddstatusComponent
+    }
 
   
 ];

@@ -27,10 +27,51 @@ import { UpdateleaveComponent } from './components/requestleave/updateleave/upda
 import { DeleteleaveComponent } from './components/requestleave/deleteleave/deleteleave/deleteleave.component';
 import { GetallleavesComponent } from './components/requestleave/getallleave/getallleaves/getallleaves.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DataComponent } from './components/paymentrules/data/data/data.component';
 import { ItemsComponent } from './components/paymentrules/items/items/items.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HeaderComponent } from './components/header/header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { AddstatusComponent } from './components/leavestatus/addstatus/addstatus/addstatus.component';
+import { UpdatestatusComponent } from './components/leavestatus/updatestatus/updatestatus/updatestatus.component';
+import { GetstatusComponent } from './components/leavestatus/getstatus/getstatus/getstatus.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
+import { DisplayComponent } from './components/display/display.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +96,15 @@ import { ItemsComponent } from './components/paymentrules/items/items/items.comp
     DeleteleaveComponent,
     GetallleavesComponent,
     DataComponent,
-    ItemsComponent
+    ItemsComponent,
+    HeaderComponent,
+    SidenavComponent,
+    AddstatusComponent,
+    UpdatestatusComponent,
+    GetstatusComponent,
+    DisplayComponent,
+    FooterComponent,
+
 
     
   
@@ -68,11 +117,52 @@ import { ItemsComponent } from './components/paymentrules/items/items/items.comp
     ReactiveFormsModule,
     FormsModule,
     NoopAnimationsModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+
+
+    
+    
   
 
   ],
   providers: [
-    AuthService
+    AuthService,HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

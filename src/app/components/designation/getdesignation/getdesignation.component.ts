@@ -11,14 +11,17 @@ import { DesignationService } from 'src/app/services/designation.service';
 export class GetdesignationComponent implements OnInit {
 
   Designation:Designation[]=[];
-
+  sortBy: string;
+  searchText: string;
   designation:Designation={
     designationID:0,
     designationName:'',
     roleName:'',
     departmentName:''
   }
-  constructor(private route:ActivatedRoute,private designationservice:DesignationService,private router:Router) { }
+  constructor(private route:ActivatedRoute,private designationservice:DesignationService,private router:Router)
+   { this.searchText = '';
+   this.sortBy = '';}
 
 
   ngOnInit(): void {

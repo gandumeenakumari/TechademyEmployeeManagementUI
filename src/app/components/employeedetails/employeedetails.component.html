@@ -1,13 +1,41 @@
+
 <div class="container my-5">
-    <h1 class="mb-3">Employees</h1>
+    <h1 class="mb-3">Employee Details</h1>
     
 <div class="container">
+    <div class="center-dialog-vertically">
     <a class="btn btn-sm text-white btn-primary"  [routerLink]="['/addemployee']">Add Employee &nbsp;<i class="bi bi-bag"></i></a>
 </div>
+</div>
     
+<div class="container mt-5">
+    <div class="form-group float-end text-right">
+        
+            <input type="text" name="Search" [(ngModel)]="searchText" placeholder="Search by ID,Name,Email">
+       
+    </div>
+</div>
+<div>
+    <p>
+
+    </p>
+</div>
+
+<div class="container">
+    <div>
+        <h3>Show  <select (change)="onTableSizeChange($event)">
+            
+            <option *ngFor="let size of tablesize">
+               {{size}}
+            </option>
+        </select> Entities </h3>
+       
+    </div>
+
     <table class="table" *ngIf="EmployeeDetails && EmployeeDetails.length > 0">
         <thead>
             <tr>
+               
             <th>Employee Id</th>
             <th>Name</th>
             <th>Gender</th>
@@ -20,11 +48,15 @@
             <th>Department Name</th>
             <th>Member Since</th>
             <th></th>
+            <th></th>
 
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let emp of EmployeeDetails">
+            <tr *ngFor="let emp of EmployeeDetails |filter:searchText | paginate:{itemsPerPage:tableSize,
+                currentPage:page,
+                totalItems:count}; let i=index;let j=index;">
+                
                 <td>{{emp.employeeID}}</td>
                 <td>{{emp.employeeName}}</td>
                 <td>{{emp.gender}}</td>
@@ -43,5 +75,13 @@
             </tr>
         </tbody>
     </table>
+    <div>
+    </div>
+        <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
+
     <p *ngIf="!EmployeeDetails || EmployeeDetails.length<=0">No Employees found</p>
 </div>

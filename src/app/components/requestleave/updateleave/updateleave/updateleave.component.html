@@ -5,14 +5,9 @@
         <div class="col-6">
         <form #form="ngForm" (ngSubmit)="updateLeave">
             <div class="mb-3">
-                <label for="leaveID" class="form-label">Leave Id</label>
-                <input type="number" class="form-control" id="leaveID" readonly
-                name="leaveID"[(ngModel)]="requestleave.leaveID">
-              </div>
-              <div class="mb-3">
-                <label for="employeeID" class="form-label">Employee ID</label>
-                <input type="number" class="form-control" id="employeeID" 
-                name="employeeID"[(ngModel)]="requestleave.employeeID">
+                <label for="id" class="form-label">Leave Id</label>
+                <input type="number" class="form-control" id="id" readonly
+                name="id"[(ngModel)]="requestleave.id">
               </div>
               <div class="mb-3">
                 <label for="leaveType" class="form-label">Leave Type</label>
@@ -29,18 +24,8 @@
                 <input type="text" class="form-control" id="leaveReason" 
                 name="leaveType"[(ngModel)]="requestleave.leaveType">
               </div>
-            
-           
-              <div class="mb-3">
-                <label for="leaveStatus" class="form-label">Leave Status</label>
-                <input type="text" class="form-control" id="leaveStatus" 
-                name="leaveStatus"[(ngModel)]="requestleave.leaveType">
-              </div>
-           
-           
-          
             <button type="submit" class="btn btn-success" (click)="updateLeave()">Save</button>
-            <button type="button" class="btn btn-danger"(click)="deleteLeave(requestleave.leaveID)">Delete</button>
+            <button type="button" class="btn btn-danger"(click)="deleteLeave(requestleave.id)">Delete</button>
           </form>  
                       
         </div>

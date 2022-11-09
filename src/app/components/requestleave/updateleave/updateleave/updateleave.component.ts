@@ -10,12 +10,11 @@ import { RequestleaveService } from 'src/app/services/requestleave.service';
 })
 export class UpdateleaveComponent implements OnInit {
   requestleave:RequestLeave={
-    leaveID:0,
-    employeeID:0,
+    id:0,
     leaveType:'',
     when:new Date(),
     leaveReason:'',
-    leaveStatus:''
+
   
   }
   constructor(private route:ActivatedRoute,private requestleaveservice:RequestleaveService,private router:Router) { }
@@ -25,10 +24,10 @@ export class UpdateleaveComponent implements OnInit {
     this.route.paramMap.subscribe({
       next:(params)=>
       {
-        const leaveID =params.get('leaveID');
-        if(leaveID)
+        const id =params.get('id');
+        if(id)
         {
-          this.requestleaveservice.getLeave(leaveID)
+          this.requestleaveservice.getLeave(id)
           .subscribe({
             next:(response)=>
             {
@@ -41,14 +40,14 @@ export class UpdateleaveComponent implements OnInit {
     });
   }
   updateLeave(){
-    this.requestleaveservice.updateLeave(this.requestleave.leaveID,this.requestleave)
+    this.requestleaveservice.updateLeave(this.requestleave.id,this.requestleave)
     .subscribe({
       next:(response) =>{
         this.router.navigate(['/getallleaves']);
       }});
     }
-    deleteLeave(leaveID:number){
-      this.requestleaveservice.deleteLeave(leaveID)
+    deleteLeave(id:number){
+      this.requestleaveservice.deleteLeave(id)
       .subscribe({
         next:(response) =>{
           this.router.navigate(['/getallleaves']);
