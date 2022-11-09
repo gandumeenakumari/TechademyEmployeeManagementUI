@@ -10,10 +10,21 @@ import { WorkinghoursService } from 'src/app/services/workinghours.service';
 export class GetallworkinghoursComponent implements OnInit {
 
   Workinghours:Workinghours[]=[];
+  searchText:any;
+title='pagination';
+
+POSTS:any;
+page:number=1;
+count:number=0;
+tableSize:number=10;
+tablesize:any=[5,10,15,20]
   constructor(private workinghourservice:WorkinghoursService) { }
 
   ngOnInit(): void {
-    this.workinghourservice.getToalWorkingHours()
+    this.getToalWorkingHours()
+  }
+  getToalWorkingHours():void{
+  this.workinghourservice.getToalWorkingHours()
   .subscribe({
     next:(Workinghours)=>{
       
@@ -24,7 +35,18 @@ export class GetallworkinghoursComponent implements OnInit {
       console.log(response);
     }
   })
-  }
+}onTableDataChange(event:any)
+{
+  this.page=event;
+  this.getToalWorkingHours();
+}
+onTableSizeChange(event:any):void
+{
+  this.tableSize=event.target.value;
+  this.page=1;
+  this.getToalWorkingHours();
+}
+
   }
 
 
