@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 
+
 import { PaymentrulesService } from './paymentrules.service';
 
 describe('PaymentrulesService', () => {
   let service: PaymentrulesService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+     
+     });
     service = TestBed.inject(PaymentrulesService);
   });
 

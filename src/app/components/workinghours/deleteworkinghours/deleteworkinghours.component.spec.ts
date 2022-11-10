@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { DeleteworkinghoursComponent } from './deleteworkinghours.component';
 
 describe('DeleteworkinghoursComponent', () => {
@@ -8,6 +9,7 @@ describe('DeleteworkinghoursComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      
       declarations: [ DeleteworkinghoursComponent ]
     })
     .compileComponents();

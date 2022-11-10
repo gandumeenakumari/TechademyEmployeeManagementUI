@@ -32,8 +32,8 @@
                 <th>S.No</th>
                 <th>ID</th>
                 <th>Employee ID</th>
-                <th>companyWokingHours</th>
-                <th>employeeWorkingHours</th>
+                <th>Company Woking Hours</th>
+                <th>Employee Working Hours</th>
                 <th style="text-align:center">Action</th>
                 
             
@@ -47,7 +47,7 @@
             totalItems:count}; let i=index;let sr=index">
             <td>{{sr+1}}</td>
             <td>{{emp.id}}</td>
-            <td>{{emp.employeeID}}</td>,
+            <td>{{emp.employeeID}}</td>
             <td>{{emp.companyWokingHours}}</td>
             <td>{{emp.employeeWorkingHours}}</td>
             <td style="text-align:center"><a class="btn btn-sm text-white btn-primary"  [routerLink]="[emp.id]">View &nbsp;<i class="bi bi-bag"></i></a>
