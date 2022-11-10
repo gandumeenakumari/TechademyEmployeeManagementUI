@@ -74,6 +74,8 @@ import { FooterComponent } from './components/footer/footer/footer.component';
 import { PaymentrulesComponent } from './components/paymentrules/paymentrules/paymentrules.component';
 import { AddpaymentrulesComponent } from './components/paymentrules/addpaymentrules/addpaymentrules/addpaymentrules.component';
 import { UpdatepaymentrulesComponent } from './components/paymentrules/updatepaymentrules/updatepaymentrules/updatepaymentrules.component';
+import { ContactComponent } from './components/contact/contact/contact.component';
+import { AboutComponent } from './components/about/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,6 +110,8 @@ import { UpdatepaymentrulesComponent } from './components/paymentrules/updatepay
     PaymentrulesComponent,
     AddpaymentrulesComponent,
     UpdatepaymentrulesComponent,
+    ContactComponent,
+    AboutComponent,
 
 
     

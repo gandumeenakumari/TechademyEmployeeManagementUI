@@ -25,4 +25,9 @@ describe('UpdatedesignationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('checking ',()=>
+  {
+    expect(component.deleteDesignation(5)).not.toBeFalse();
+  })
 });

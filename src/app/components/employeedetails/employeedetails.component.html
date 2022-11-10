@@ -1,20 +1,12 @@
 
 <nav>
-    <img src="">
+   
     <ul>
+        
+        <li><a href="/employeedetails">Employee Details</a></li>
         <li><a href="/getdesignation">Designation</a></li>
         <li><a href="/getallworkinghours">Working Hours</a></li>
-        <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Leave Management
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item " aria-current="page" routerLink="/addleave">Request Leave</a></li>
-              <li><a class="dropdown-item " aria-current="page" routerLink="/getstatus">Leave Status</a></li> 
-              <li><a class="dropdown-item " aria-current="page" routerLink="/getallleaves">All Leave Data</a></li> 
-               
-            </ul>
-          </li>
+        <li><a href="/getallleaves">Leave Management</a></li>
         <li><a href="/paymentrules">Payment Rules</a></li>
         
     </ul>
@@ -86,7 +78,7 @@
                 <td>{{emp.roleName}}</td>
                 <td>{{emp.departmentName}}</td>
                 <td>{{emp.memberSince}}</td> 
-            <td style="text-align:center"><a class="btn btn-sm text-white btn-warning" style="margin:5px" [routerLink]="[emp.employeeID]">Edit &nbsp;<i class="bi bi-bag"></i></a>
+            <td style="text-align:center"><a class="btn btn-sm text-white btn-primary" style="margin:5px" [routerLink]="[emp.employeeID]">Edit &nbsp;<i class="bi bi-bag"></i></a>
             </td><td><a class="btn btn-sm text-white btn-danger" style="margin:5px" [routerLink]="[emp.employeeID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
           
        
