@@ -45,7 +45,7 @@
             <th>Role Name</th>
             <th>Department Name</th>
             <th>Member Since</th>
-            <th>View</th>
+            <th style="text-align:center" width="50%">View</th>
             <th style="text-align:center">Delete</th>
             </tr>
         </thead>
@@ -65,8 +65,8 @@
                 <td>{{emp.roleName}}</td>
                 <td>{{emp.departmentName}}</td>
                 <td>{{emp.memberSince}}</td> 
-            <td><a class="btn btn-sm text-white btn-primary" [routerLink]="[emp.employeeID]">View &nbsp;<i class="bi bi-bag"></i></a>
-            </td><td><a class="btn btn-sm text-white btn-danger"  [routerLink]="[emp.employeeID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
+            <td style="text-align:center"><a class="btn btn-sm text-white btn-primary" style="margin:5px" [routerLink]="[emp.employeeID]">View &nbsp;<i class="bi bi-bag"></i></a>
+            </td><td><a class="btn btn-sm text-white btn-danger" style="margin:5px" [routerLink]="[emp.employeeID]">Delete &nbsp;<i class="bi bi-bag"></i></a></td>
           
        
             </tr>
