@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { GetallworkinghoursComponent } from './getallworkinghours.component';
 
@@ -8,7 +10,8 @@ describe('GetallworkinghoursComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-     
+      imports : [HttpClientModule,RouterTestingModule],
+
       declarations: [ GetallworkinghoursComponent ]
     })
     .compileComponents();
