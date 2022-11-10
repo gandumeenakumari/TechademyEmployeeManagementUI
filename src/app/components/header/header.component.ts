@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  myimage:string="assets/images/employee.jpg";
   constructor(private router:Router) { }
 
   ngOnInit(): void {

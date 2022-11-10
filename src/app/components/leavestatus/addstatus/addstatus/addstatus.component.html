@@ -5,6 +5,11 @@
         <div class="col-6">
         <form #form="ngForm" (ngSubmit)="addStatus()">
           <div class="mb-3">
+            <label for="id" class="form-label">Leave Status</label>
+            <input type="number" class="form-control" id="id" readonly
+            name="=id"[(ngModel)]="request.id" >
+          </div>
+          <div class="mb-3">
             <label for="status" class="form-label">Leave Status</label>
             <input type="text" class="form-control" id="status"
             name="=status"[(ngModel)]="request.status" >

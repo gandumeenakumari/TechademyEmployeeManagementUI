@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  myimage:string="assets/images/employee.jpg";
   constructor(private router:Router) { }
 
   ngOnInit(): void {

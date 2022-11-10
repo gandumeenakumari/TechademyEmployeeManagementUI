@@ -7,7 +7,7 @@ nav
 }
 nav img{
     width: 100px;
-    height: auto;
+    height:min-content
 }
 nav ul{
     float: right;
@@ -16,9 +16,16 @@ nav ul{
 ul li{
     display: inline-block;
     padding: 10px;
+    font-size:x-large;
+   
 }
 li a{
     color: white;
     cursor: pointer;
+    list-style-type: none;
 
+}
+img{
+    width: 100%;
+    height: 100%;
 }
