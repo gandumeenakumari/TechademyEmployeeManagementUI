@@ -24,4 +24,10 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it(`should have title 'Employee Management'` ,()=>{
+    const fixture=TestBed.createComponent(HomeComponent);
+    const app=fixture.componentInstance;
+    expect(app.title).toEqual('Employee Management');
+  });
+
 });

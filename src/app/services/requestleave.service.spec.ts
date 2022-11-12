@@ -27,4 +27,13 @@ describe('RequestleaveService', () => {
   it('checking deleted', () => {
     expect(service.deleteLeave(request.id)).toBeTruthy();
   });
+  it('checkung add',()=>{
+    expect(service.addLeave(request)).toBeTruthy();
+  })
+  it('checking update',()=>{
+    expect(service.updateLeave(5,request)).toBeTruthy();
+  });
+  it('checking get',()=>{
+    expect(service.getLeave.length).toEqual(1);
+  })
 });

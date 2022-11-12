@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AddemployeeComponent } from './addemployee.component';
@@ -11,7 +11,7 @@ describe('AddemployeeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports : [HttpClientModule,RouterTestingModule,FormsModule],
+      imports : [HttpClientModule,RouterTestingModule,FormsModule,ReactiveFormsModule],
       declarations: [ AddemployeeComponent ]
     })
     .compileComponents();
