@@ -66,6 +66,10 @@ const routes: Routes = [
       component:GetstatusComponent
     },
     {
+      path:'display',
+      component:DisplayComponent
+    },
+    {
       path: 'home',
       component : HomeComponent,
       canActivate : [AuthGuard]

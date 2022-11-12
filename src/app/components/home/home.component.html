@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
     <a class="navbar-brand" href="#">Techademy Employee Management System</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,12 +39,14 @@
           
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" 
-            routerLink="/profile">Profile</a>
+            routerLink="/display">Logout</a>
           </li>
         </ul>
     </div>
   </nav>
   <div>
-    <img [src]="myimage" alt="">
+    
+    <!--<img [src]="myimage" alt="">-->
+    
 </div>
   <router-outlet></router-outlet>
